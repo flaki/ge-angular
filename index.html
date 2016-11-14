@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="budgetApp">
+  <head>
+    <title>My Very Own Budgeting Application</title>
+  </head>
+  <body ng-controller="BudgetController">
+    <h1>Hello Angular Budgets!</h1>
+    <h2>Budget handling applications in Angular JS</h2>
+
+    <h3>Add budget item</h3>
+    <div>Date:
+      <input type="text" ng-model="newRecord.date" />
+    </div>
+    <div>Amount:
+        <input type="text" ng-model="newRecord.amount" />
+    </div>
+
+    <div>
+        <button ng-click="addRecord()">Add record</button>
+    </div>
+
+
+    <h3>Current budget contents:</h3>
+    <ol>
+      <li ng-repeat="(id, value) in data track by id">
+        budget record item #{{id}} - value: [ {{value.date}} ] {{value.amount}}
+      </li>
+    </ol>
+
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="src/js/budgetApp.js"></script>
+  </body>
+</html>

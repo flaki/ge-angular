@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="budgetApp">
+  <head>
+    <title>My Very Own Budgeting Application</title>
+  </head>
+  <body ng-controller="BudgetController">
+    <h1>Hello Angular Budgets!</h1>
+    <p>1 + 1 is sometimes, but also usually {{1+1}}!</p>
+    <p>Flaki's budget currently: {{myBudget|currency:"$":"0"}} <button ng-click="increaseBudget()">Make it rain!</button></p>
+    <p>{{myText|uppercase|limitTo:5}}</p>
+    <p><input type="text" ng-model="myText" /> <button ng-click="console.log('text')">What's my text?</button></p>
+
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="src/js/budgetApp.js"></script>
+  </body>
+</html>
